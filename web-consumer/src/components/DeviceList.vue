@@ -6,14 +6,14 @@ const props = defineProps({
     required: true,
   },
 })
-
 </script>
 
 <template>
   <div class="device-list">
     <ul>
       <li v-for="d in props.devices" :key="d.serialnumber">
-        {{ d.serialnumber }} – {{ d.name }} @ {{ d.location.lat }},{{ d.location.long }} PSI: {{ d.current_psi }}
+        {{ d.serialnumber }} – {{ d.name }} @ {{ d.location.lat }},{{ d.location.long }} PSI:
+        {{ d.current_psi }}
       </li>
     </ul>
   </div>

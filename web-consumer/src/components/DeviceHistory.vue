@@ -4,29 +4,22 @@ import { defineProps, computed } from 'vue'
 const props = defineProps({
   data: {
     type: Array,
-    required: true
+    required: true,
   },
   maxPoints: {
     type: Number,
-    default: 40
-  }
+    default: 40,
+  },
 })
 
-const recent = computed(() =>
-  props.data.slice(-props.maxPoints)
-)
+const recent = computed(() => props.data.slice(-props.maxPoints))
 const maxVal = computed(() => Math.max(...recent.value, 1))
 </script>
 
 <template>
   <div class="history">
-    <div
-      v-for="(val, i) in recent"
-      :key="i"
-      class="bar-container"
-      :title="val + ' devices'"
-    >
-      <div class="bar" :style="{ height: (val / maxVal * 100) + '%' }"></div>
+    <div v-for="(val, i) in recent" :key="i" class="bar-container" :title="val + ' devices'">
+      <div class="bar" :style="{ height: (val / maxVal) * 100 + '%' }"></div>
       <span class="bar-value">{{ val }}</span>
     </div>
   </div>

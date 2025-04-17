@@ -1,6 +1,8 @@
 # We have Realtime at Home
 
-This project is a test to see how much we can do with a REST server based on Node.js that provides as much data as possible per request while not blocking the thread for file transfer sizes.
+> PoC Project, please don't use it in any capacity or run it at all.
+
+This project is a basic test to see how much we can do with a REST server based on Node.js that provides as much data as possible per request while not blocking the thread for file transfer sizes. Since Node.js in general does not like long running transfers, this would only work for horizontal deployed server or with a webserver that supports multple workers per request. The general idea is to simply split the reponse into smaller parts, NDJSON seems to be a good fit for this test.
 
 ## NDJSON [repo](https://github.com/ndjson)
 
@@ -56,7 +58,8 @@ This part is just a small vue app to test the streaming capabilities from a visu
 | Param | Desc | Example |
 |-------|------|---------|
 | VITE_API_BASE_URL| The URL to the server component. | VITE_API_BASE_URL=http://boblab:5000 |
-| VITE_STREAM_DELAY_MS | The URL to the server component. | VITE_STREAM_DELAY_MS=200 |
+| VITE_STREAM_DELAY_MS | A aritifical time delay between full request cycles. | VITE_STREAM_DELAY_MS=200 |
+| VITE_STREAM_COUNT | Number of devices to request from the server. | VITE_STREAM_COUNT=100 |
 
 ### Run / Dev
 ```bash

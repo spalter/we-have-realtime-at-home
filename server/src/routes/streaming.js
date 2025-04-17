@@ -58,13 +58,13 @@ function generateSimulatedDevices(count = 50) {
       alarms:
         Math.random() < 0.05
           ? [
-            {
-              date: now,
-              type: ['overheat', 'low_pressure'][
-                Math.floor(Math.random() * 2)
-              ],
-            },
-          ]
+              {
+                date: now,
+                type: ['overheat', 'low_pressure'][
+                  Math.floor(Math.random() * 2)
+                ],
+              },
+            ]
           : [],
     };
   });

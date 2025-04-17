@@ -6,7 +6,7 @@ const props = defineProps({
   lastDelta: { type: String, required: true },
   lastCount: { type: Number, required: true },
   historyLen: { type: Number, required: true },
-  avgDelta:   { type: String, required: true }
+  avgDelta: { type: String, required: true },
 })
 </script>
 

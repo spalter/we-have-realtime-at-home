@@ -23,6 +23,20 @@ npm run podman:stop
 
 Checkout the consumer log e.g. from the podman output, there is the number of processed messages + the deltatime.
 
-```log
+Example:
 
+```log
+Processed 53 devices in chunk
+Processed 19 devices in chunk
+Processed 29 devices in chunk
+Processed 15 devices in chunk
+Processed 39 devices in chunk
+Processed 30 devices in chunk
+Processed 10 devices in chunk
+Processed 19 devices in chunk
+Processed 24 devices in chunk
+Processed 5 devices in chunk
+Processed 77 devices in chunk
+Total devices processed: 10000
+Delta since last full update: 0.61s
 ```

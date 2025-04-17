@@ -3,6 +3,7 @@ node_modules/
 
 # Exclude build output
 dist/
+*.tar
 
 # Exclude logs and data files
 *.log

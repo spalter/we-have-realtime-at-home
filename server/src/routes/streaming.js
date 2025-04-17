@@ -56,7 +56,7 @@ function generateSimulatedDevices(count = 50) {
       location: { lat, long, alt },
       group: `${(100000 * Math.random()).toFixed(0)}`,
       alarms:
-        Math.random() > 0.5
+        Math.random() < 0.05
           ? [
             {
               date: now,

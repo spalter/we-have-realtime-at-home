@@ -1,8 +1,10 @@
 # Exclude Node Stuff
 node_modules/
+.env
 
 # Exclude build output
 dist/
+*.tar
 
 # Exclude logs and data files
 *.log

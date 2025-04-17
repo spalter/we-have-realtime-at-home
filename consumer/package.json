@@ -1,0 +1,19 @@
+{
+  "name": "consumer",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js",
+    "podman:build": "podman build -t rest-server:latest -f Containerfile .",
+    "podman:run": "podman run -d -p 5000:5000 --name rest-server rest-server:latest"
+  },
+  "dependencies": {
+    "node-fetch": "^2.7.0",
+    "nodemon": "^3.1.9"
+  }
+}

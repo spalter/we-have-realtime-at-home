@@ -1,0 +1,22 @@
+{
+  "name": "rest-server",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "podman:build": "podman build -t rest-server:latest -f Containerfile .",
+    "podman:run": "podman run -d -p 5000:5000 --name rest-server rest-server:latest"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

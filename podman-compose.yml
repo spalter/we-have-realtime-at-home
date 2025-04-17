@@ -1,0 +1,25 @@
+version: "3.7"
+
+services:
+  rest-server:
+    build:
+      context: ./server
+      dockerfile: Containerfile
+    container_name: rest-server
+    ports:
+      - "5000:5000"
+    cpus: "0.5"
+    mem_limit: 256m
+
+  device-consumer:
+    build:
+      context: ./consumer
+      dockerfile: Containerfile
+    container_name: device-consumer
+    depends_on:
+      - rest-server
+    command: /bin/sh -c "sleep 2 && npm start"
+    cpus: "0.5"
+    mem_limit: 128m
+    environment:
+      - DEVICES_API_URL=http://rest-server:5000/api/devices/stream

@@ -1,0 +1,9 @@
+# Exclude Node Stuff
+node_modules/
+
+# Exclude build output
+dist/
+
+# Exclude logs and data files
+*.log
+*.ndjson

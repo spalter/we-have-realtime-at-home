@@ -1,5 +1,6 @@
 # Exclude Node Stuff
 node_modules/
+.env
 
 # Exclude build output
 dist/

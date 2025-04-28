@@ -6,6 +6,7 @@
     "dev:consumer": "npm run dev --prefix consumer",
     "dev": "npm run dev:server & sleep 2 && npm run dev:consumer",
     "format": "prettier --write \"server/**/*.{js,json,md}\" \"consumer/**/*.{js,json,md}\"",
+    "podman:build": "podman-compose build",
     "podman:start": "podman-compose up --build -d",
     "podman:stop": "podman-compose down"
   },

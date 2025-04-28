@@ -57,11 +57,12 @@ This part is just a small vue app to test the streaming capabilities from a visu
 
 | Param | Desc | Example |
 |-------|------|---------|
-| VITE_API_BASE_URL| The URL to the server component. | VITE_API_BASE_URL=http://boblab:5000 |
+| VITE_API_BASE_URL| The URL to the server component. | VITE_API_BASE_URL=<http://boblab:5000> |
 | VITE_STREAM_DELAY_MS | A aritifical time delay between full request cycles. | VITE_STREAM_DELAY_MS=200 |
 | VITE_STREAM_COUNT | Number of devices to request from the server. | VITE_STREAM_COUNT=100 |
 
 ### Run / Dev
+
 ```bash
 cd web-consumer
 npm install
